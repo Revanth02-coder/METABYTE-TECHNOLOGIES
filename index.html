@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metabyte Technologies</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0d1117;
+            color: #ffffff;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+      
+        header {
+            background: #131820;
+            padding: 20px;
+            text-align: center;
+            transition: background 0.3s ease-in-out;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 60px;
+        }
+      
+        .fade-in {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #4cff2c;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease-in-out, transform 0.2s;
+        }
+        .btn:hover {
+            background: #00d4ff;
+            transform: scale(1.05);
+        }
+        section {
+            padding: 40px;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+        }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 50px;
+    }
+
+    .logo {
+        width: 350px;
+        padding-left: 50px;
+        border-radius: 15px;
+        animation: slideInFromLeft 2.5s ease-out;
+    }
+    .text {
+    font-size: 18px;
+    color: #ffffff;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Bullet styling */
+#typing-text {
+    list-style: none;
+    padding: 0;
+}
+
+/* Bullet appearance */
+#typing-text li {
+    opacity: 0;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+/* Typing Cursor */
+.typing-cursor::after {
+    content: "|";
+    animation: blink 0.7s infinite;
+}
+
+/* Cursor blink */
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+    #services-section {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #0d1117, #003366);
+    color: #39ff14;
+}
+
+.service-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.service {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.service.highlight {
+    border: 2px solid #39ff14; /* Highlights Web Dev & Internships */
+}
+
+.service:hover {
+    background: #ffffff1a;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+#about {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #0d1117, #1a1a2e);
+    color: #39ff14;
+}
+
+/* Container for founders */
+.founders-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Individual founder block */
+.founder {
+    text-align: center;
+    position: relative;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Keep images as they are (no rounded shape) */
+.founder img {
+    width: 350px;  /* Adjust size as needed */
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect - move image up slightly */
+.founder:hover img {
+    transform: translateY(-10px);
+}
+
+/* Founder info - hidden by default */
+.founder-info {
+    background: #ffffff1a;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(57, 255, 20, 0.8);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    margin-top: 10px;
+}
+
+/* Show details below the image on hover */
+.founder:hover .founder-info {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.founder-info h3 {
+    margin: 5px 0;
+    font-size: 18px;
+    color: #39ff14;
+}
+
+.founder-info p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #ffffff;
+}
+footer {
+    background: #0d1117;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.footer-container {
+    max-width: 600px;
+    margin: auto;
+    
+}
+
+#contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.footer-link {
+    color: #39ff14;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out, transform 0.2s;
+}
+
+.footer-link i {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+.footer-link:hover {
+    color: #00d4ff;
+    transform: scale(1.1);
+}
+
+p {
+    font-size: 14px;
+    color: #ffffff;
+}
+footer {
+    background: linear-gradient(135deg, #0d1117, #003366);
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+    margin-top: 20px;
+}
+.navbar {
+    text-align: center;
+    padding: 15px 0;
+    background: linear-gradient(135deg, #0d1117, #003366); /* Same as services */
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navbar ul li {
+    display: inline-block;
+}
+
+.navbar ul li a {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #39ff14;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #39ff14; /* Visible green border on hover */
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out, border 0.3s;
+}
+
+/* Highlight effect (border appears on hover) */
+.navbar ul li a:hover {
+    background: #ffffff1a;
+    color: #ffffff;
+    transform: scale(1.05);
+    border: 2px solid #39ff14; /* Visible green border on hover */
+}
+
+/* Highlight specific links (like active services) */
+.navbar ul li a.highlight {
+    border: 2px solid #39ff14; /* Always highlighted */
+}
+.service a {
+    text-decoration: none;  /* Removes underline */
+    color: inherit; /* Inherits color from parent */
+    transition: color 0.3s ease-in-out;
+}
+
+.service a:hover {
+    color: #ffffff; /* Changes text color on hover */
+}
+html {
+    scroll-behavior: smooth;
+}
+
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll("section, #hero");
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("fade-in");
+                    }
+                });
+            }, { threshold: 0.2 });
+            
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+            // Generate background animation elements
+            const bgContainer = document.createElement("div");
+            bgContainer.classList.add("animated-bg");
+            document.body.prepend(bgContainer);
+            
+            for (let i = 0; i < 30; i++) {
+                const span = document.createElement("span");
+                span.style.left = Math.random() * 100 + "vw";
+                span.style.top = Math.random() * 100 + "vh";
+                span.style.animationDuration = Math.random() * 10 + 5 + "s";
+                bgContainer.appendChild(span);
+            }
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+    let items = document.querySelectorAll("#typing-text li");
+    let delay = 0;
+
+    items.forEach((item, index) => {
+        setTimeout(() => {
+            item.style.opacity = 1;
+            typeEffect(item);
+        }, delay);
+        delay += item.textContent.length * 100; // Adjust typing speed
+    });
+
+    function typeEffect(element) {
+        let text = element.textContent;
+        element.textContent = "";
+        let i = 0;
+        let interval = setInterval(() => {
+            if (i < text.length) {
+                element.textContent += text[i];
+                i++;
+            } else {
+                clearInterval(interval);
+            }
+        }, 50); // Typing speed
+    }
+});
+function scrollToServices() {
+    document.getElementById("services").scrollIntoView({ behavior: "smooth" });
+  }
+  window.onload = function() {
+        if (window.location.hash) {
+            document.querySelector(window.location.hash).scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
+    </script>
+</head>
+<body>
+    <header>
+      <nav class="navbar">
+        <ul>
+            <li><a href="index.html" class="btn">HOME</a></li>
+            <li><a href="#services-section" class="btn" onclick="scrollToServices()">SERVICES</a></li>
+            <li><a href="internships.html#container" class="btn" onclick="scrollToServices()">ABOUT-US</a></li>
+            <li><a href="#contact" class="btn">CONTACT</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+    <img src="images/logio.jpg" alt="Metabyte Logo" class="logo">
+    <div class="text">
+      <ul id="typing-text">
+          <li>"Hi, Welcome to <strong>Metabyte Technologies!</strong></li>
+          <li>We innovate, build, and scale cutting-edge digital solutions.</li>
+          <li>We specialize in <strong>Website Development</strong>, <strong>Digital Marketing</strong>, <strong>Content Creation</strong>, and <strong>Internships</strong>.</li>
+          <li>With the power of <strong>Artificial Intelligence</strong>, we enhance automation and optimize workflows.</li>
+          <li>Our AI-driven solutions ensure efficiency, accuracy, and innovation.</li>
+          <li>Join us and experience <strong>creativity, technology, and excellence</strong>—powered by AI and human expertise!</li>
+      </ul>
+  </div>
+</div>
+       
+    </header>
+    
+    <section id="services-section">
+        <h2>Services We Provide</h2>
+      <p>At Metabyte Technologies, we offer cutting-edge solutions tailored to your business needs.</p>
+      
+      <div class="service-container">
+        <div class="service highlight">
+            <a href="web-development.html"><h3>💻 Web Development</h3></a>
+            <p>We create high-performance, visually stunning websites that engage users and drive business growth.</p>
+        </div>
+    
+        <div class="service highlight">
+            <a href="internships.html"><h3>🎓 Internships</h3></a>
+            <p>Gain hands-on experience in IT, coding, and digital solutions with our industry-focused internship programs.</p>
+        </div>
+    
+        <div class="service highlight">
+            <a href="digital-marketing.html"><h3>📈 Digital Marketing</h3></a>
+            <p>Boost your brand's online presence with our expert digital marketing strategies.</p>
+        </div>
+    
+        <div class="service highlight">
+            <a href="content-creation.html"><h3>✍️ Content Creation</h3></a>
+            <p>We craft compelling and engaging content that captivates your audience and strengthens your brand identity.</p>
+        </div>
+    </div>
+    
+  </section>
+  
+    
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Metabyte Technologies specializes in website development, digital marketing, and internships, empowering businesses with innovative digital solutions.</p>
+
+    <div class="founders-container">
+        <div class="founder">
+            <img src="images/IMG-20240301-WA0000.jpg" alt="Co-Founder" class="founder-img">
+            <div class="founder-info">
+                <h3>AKULA REVANTH SAI</h3>
+                <p><strong>Co-Founder & CTO</strong></p>
+                <p>REVANTH is the tech mastermind behind Metabyte, driving innovation in web development, AI, and digital transformation.</p>
+            </div>
+        </div>
+        <div class="founder">
+          <img src="images/moses.jpg" alt="Founder" class="founder-img">
+          <div class="founder-info">
+              <h3>PALLEM MOSES</h3>
+              <p><strong>Founder & CEO</strong></p>
+              <p>With a vision to revolutionize technology, MOSES leads Metabyte with expertise in software development and business strategy.</p>
+          </div>
+      </div>
+        <div class="founder">
+            <img src="images/prudhvi.jpg" alt="Co-Founder" class="founder-img">
+            <div class="founder-info">
+                <h3>BORRA PRUDHVI CHARAN</h3>
+                <p><strong>Co-Founder & MANAGING DIRECTOR </strong></p>
+                <p>Prudhvi is focused on integrating emerging technologies to help businesses scale efficiently.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+  <div class="footer-container">
+<section id="contact">
+    <a href="tel:+919494584396" class="footer-link">
+              <i class="fa-solid fa-phone"></i> +91 94945 84396
+          </a>
+          <a href="https://www.instagram.com/metabyte_technologies?igsh=MXFoazBsZmF1b3ZiZw==" target="_blank" class="footer-link">
+              <i class="fa-brands fa-instagram"></i> Instagram
+          </a>
+          <a href="https://wa.me/919494584396" target="_blank" class="footer-link">
+              <i class="fa-brands fa-whatsapp"></i> WhatsApp
+          </a>
+          <a href="https://www.linkedin.com/posts/metabyte-technologies-it-solutions_hiring-sales-marketing-activity-7297224040862072832-eNYl?utm_source=share&utm_medium=member_ios&rcm=ACoAAEEl7L8BfnbSodO26IzC_SWHoWUtxvdivgo" target="_blank" class="footer-link">
+              <i class="fa-brands fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="mailto:metabytet@gmail.com" class="footer-link">
+              <i class="fa-solid fa-envelope"></i> metabytet@gmail.com
+          </a>
+      </div>
+      <p>&copy; 2025 Metabyte Technologies. All rights reserved.</p>
+    </section>
+  </div>
+</footer>
+
+</body>
+</html>

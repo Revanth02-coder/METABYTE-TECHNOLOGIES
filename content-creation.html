@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Creation - METABYTE TECHNOLOGIES</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0a0f1e;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        .navbar {
+    text-align: center;
+    padding: 15px 0;
+    background: linear-gradient(135deg, #0d1117, #003366); /* Same as services */
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+}
+
+.navbar ul li {
+    display: inline-block;
+}
+
+.navbar ul li a {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #39ff14;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #39ff14; /* Visible green border on hover */
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out, border 0.3s;
+}
+
+/* Highlight effect (border appears on hover) */
+.navbar ul li a:hover {
+    background: #ffffff1a;
+    color: #ffffff;
+    transform: scale(1.05);
+    border: 2px solid #39ff14; /* Visible green border on hover */
+}
+
+/* Highlight specific links (like active services) */
+.navbar ul li a.highlight {
+    border: 2px solid #39ff14; /* Always highlighted */
+}
+        .container {
+            text-align: center;
+            padding: 120px 20px 60px;
+        }
+        .section-title {
+            font-size: 36px;
+            color: #00ff80;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .content-section {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            max-width: 1000px;
+            margin: auto;
+            align-items: center;
+        }
+        .content-box {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 6px solid #00ff80;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+        }
+        .content-box:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: scale(1.05);
+        }
+        .content-box h3 {
+            color: #00ff80;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        .content-box p {
+            font-size: 16px;
+            color: #ddd;
+        }
+        .icon {
+            font-size: 40px;
+            color: #00ff80;
+            margin-bottom: 10px;
+        }
+        footer {
+    background: #0d1117;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.footer-container {
+    max-width: 600px;
+    margin: auto;
+    
+}
+
+#contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.footer-link {
+    color: #39ff14;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out, transform 0.2s;
+}
+
+.footer-link i {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+.footer-link:hover {
+    color: #00d4ff;
+    transform: scale(1.1);
+}
+
+p {
+    font-size: 14px;
+    color: #ffffff;
+}
+footer {
+    background: linear-gradient(135deg, #0d1117, #003366);
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+    margin-top: 20px;
+}
+    </style>
+    <script>function scrollToServices() {
+        document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+      }</script>
+</head>
+<body>
+
+<nav class="navbar">
+    <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="index.html#services-section" class="btn">SERVICES</a></li>
+        <li><a href="internships.html#container" class="btn" onclick="scrollToServices()">ABOUT-US</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+    </ul>
+</nav>
+
+<section id="content-creation">
+    <div class="container">
+        <h2 class="section-title">Content Creation</h2>
+        <p>At METABYTE TECHNOLOGIES, we create compelling content that strengthens your brand and captivates your audience.</p>
+        <div class="content-section">
+            <div class="content-box">
+                <div class="icon">✍️</div>
+                <h3>Creative Writing</h3>
+                <p>Engaging blogs, articles, and storytelling to build a strong brand narrative.</p>
+            </div>
+            <div class="content-box">
+                <div class="icon">🎥</div>
+                <h3>Video Production</h3>
+                <p>High-quality video content for marketing, social media, and brand engagement.</p>
+            </div>
+            <div class="content-box">
+                <div class="icon">🎨</div>
+                <h3>Graphic Design</h3>
+                <p>Eye-catching visuals and branding materials to enhance your business identity.</p>
+            </div>
+            <div class="content-box">
+                <div class="icon">📱</div>
+                <h3>Social Media Content</h3>
+                <p>Custom posts, stories, and campaigns to boost engagement and visibility.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-container">
+        <section id="contact">
+            <a href="tel:+919494584396" class="footer-link">
+                <i class="fa-solid fa-phone"></i> +91 94945 84396
+            </a>
+            <a href="https://www.instagram.com/metabyte_technologies?igsh=MXFoazBsZmF1b3ZiZw==" target="_blank" class="footer-link">
+                <i class="fa-brands fa-instagram"></i> Instagram
+            </a>
+            <a href="https://wa.me/919494584396" target="_blank" class="footer-link">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="https://www.linkedin.com/posts/metabyte-technologies-it-solutions_hiring-sales-marketing-activity-7297224040862072832-eNYl?utm_source=share&utm_medium=member_ios&rcm=ACoAAEEl7L8BfnbSodO26IzC_SWHoWUtxvdivgo" target="_blank" class="footer-link">
+                <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="mailto:metabytet@gmail.com" class="footer-link">
+                <i class="fa-solid fa-envelope"></i> metabytet@gmail.com
+            </a>
+        </div>
+        <p>&copy; 2025 Metabyte Technologies. All rights reserved.</p>
+    </section>
+  </footer>
+
+</body>
+</html>
